@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Hills of Steel</title>
+</head>
+
+<body style="margin:0;overflow:hidden;">
+
+<script>
+window.config = {
+    title: "Hills of Steel",
+    unityVersion: "2022.3.11f1"
+};
+</script>
+
+<script src="./master-loader.js"></script>
+
+</body>
+</html>

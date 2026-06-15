@@ -1,0 +1,170 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Pop Legend - Play Free Online | UXOGames</title>
+
+    <meta name="description" content="Play Bubble Pop Legend online for free on UXOGames. Match bubbles, clear levels, and enjoy fun and addictive puzzle gameplay. | UXOGames">
+
+     <link rel="stylesheet" href="/assets/style.css">
+     
+    </head>
+    <body>
+<script src="/assets/sidebar.js"></script>
+        
+    <!-- HEADER -->
+
+ <header class="game-top-header">
+  <div class="game-header-brand">UXOGames</div>
+      </header>
+        
+    <div class="game-container">
+
+        <!-- TOP SECTION: IFRAME + RIGHT SIDEBAR -->
+        <div class="page-layout">
+
+            <div class="main-game-content">
+
+                <div class="game-box" id="gameBox" data-game="bubble-pop-legend" data-orientation="portrait">
+
+        <!-- PLAY BUTTON (only mobile) -->
+        <button class="mobile-play-btn" onclick="playMobileGame()">
+            ▶
+    </button>
+        <button class="exit-fullscreen-btn" onclick="exitMobileGame()">
+        <span class="back-arrow">‹</span>
+        <div class="game-icon">
+    <img src="https://uxogames.com/uxogames_logo.png" alt="game">
+</div>
+    </button>
+
+        <iframe 
+        class="game-frame"
+        src="https://playgama.com/export/game/bubble-pop-legend?clid=p_a13c65be-2a15-4505-90ea-3051c5cbdba2"
+        allowfullscreen>
+        </iframe>
+
+    </div>
+
+                <div class="game-actions">
+                    <div class="game-title-bar">
+                    Bubble Pop Legend
+                    </div>
+
+                    <div class="actions-right">
+                        <button class="action-btn like-btn" onclick="toggleLike()">👍 <span id="likeCount">0</span></button>
+                        <button class="action-btn dislike-btn" onclick="toggleDislike()">👎 <span id="dislikeCount">0</span></button>
+                        <button class="action-btn fav-btn" onclick="toggleFav()">❤️</button>
+                        <button class="action-btn report-btn" onclick="reportGame()">🚩</button>
+                        <button class="action-btn fullscreen-action" onclick="openFullscreen()">⛶</button>
+                    </div>
+                </div>
+                <!-- SIMILAR GAMES -->
+<section class="similar-games-section">
+    <h2>Related Games</h2>
+    <div id="similarGames" class="similar-games-row"></div>
+</section>
+
+
+<!-- BOTTOM SECTION: GAME INFO -->
+<div class="game-info">
+  
+
+
+<h2>About the Game</h2>
+<p>
+<strong>🫧 Bubble Pop Legend – Play Free Online</strong><br><br>
+🎯 About Bubble Pop Legend<br>
+
+Bubble Pop Legend is a fun and addictive bubble shooter game where your goal is to clear the board by matching colors.
+ Aim carefully, shoot bubbles, and create combinations to pop them efficiently.<br>
+
+With simple gameplay and increasing difficulty, each level challenges your accuracy, planning, and strategy. 
+The more bubbles you clear in one shot, the higher your score.<br><br>
+
+<strong>⭐ Key Features</strong><br><br>
+
+🎯 Color Matching Gameplay – Match 3 or more bubbles<br>
+💥 Chain Reactions – Pop multiple bubbles in one shot<br>
+🧠 Strategic Levels – Plan your moves carefully<br>
+🪄 Power-Ups – Use special boosts to clear tough areas<br>
+📈 Level Progression – Increasing difficulty with each stage<br><br>
+
+<strong>🧠 Gameplay Mechanics</strong><br><br>
+
+Aim precisely to create effective matches<br>
+Use walls to bounce shots and reach tricky spots<br>
+Clear floating bubbles for bonus points<br>
+Manage your moves wisely to complete levels<br><br>
+
+<strong>💡 Tips & Tricks</strong><br><br>
+
+Aim for clusters to maximize pops<br>
+Use bounce shots for hard-to-reach areas<br>
+Save power-ups for difficult situations<br>
+Plan your moves ahead to avoid running out of shots<br><br>
+
+<strong>🏁 Game Progression</strong><br><br>
+
+Complete levels by clearing all bubbles. Earn stars based on your performance and unlock new challenges as you advance.<br>
+
+Each level introduces new layouts and obstacles to keep the gameplay fresh.<br><br>
+
+👤<strong>Who Should Play?</strong><br><br>
+
+Bubble Pop Legend is perfect for players who enjoy:<br><br>
+
+Puzzle and matching games<br>
+Relaxing yet challenging gameplay<br>
+Short and engaging sessions<br>
+Strategy-based thinking<br>
+</p>
+<h2>Instructions</h2>
+<p>
+<strong>🎮 How to Play</strong><br><br>
+
+Shoot bubbles toward groups of the same color to make them pop. Match three or more bubbles to clear them from the board.<br>
+
+Your goal is to remove all bubbles using limited shots while achieving the highest score possible.<br><br>
+
+<strong>🎯 Controls</strong><br><br>
+
+Desktop:<br><br>
+
+Move Mouse – Aim<br>
+Left Click – Shoot bubble<br><br>
+
+Mobile:<br><br>
+
+Swipe – Adjust aim<br>
+Tap – Shoot<br>
+</p>
+<h2>Publisher</h2>
+<p>
+This game is provided by its official HTML5 publisher(Playgama) and made accessible to play online by UXOGames.
+</p>
+
+
+
+    </div>
+                
+            </div>
+
+            <aside class="right-sidebar">
+                <div id="randomGames"></div>
+            </aside>
+
+        </div>
+
+
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+        
+    <script src="/assets/games.js"></script>
+    <script src="/assets/main.js"></script>
+
+    </body>
+    </html> 
