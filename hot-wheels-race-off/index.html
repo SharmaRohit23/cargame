@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Unity WebGL Player</title>
+  <link rel="stylesheet" href="TemplateData/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+  <script>
+    window.alert = function() { return true; };
+    window.adConfig = {};
+    window.unityInstance = null;
+    
+    setInterval(() => {
+      if (window.unityInstance?.SendMessage) {
+        window.unityInstance.SendMessage('H5MadKidGames', 'H5_OnDomainApproved');
+      }
+    }, 100);
+  </script>
+  <style>
+    body { margin: 0; background-color: #232323; display: flex; align-items: center; justify-content: center; height: 100vh; overflow: hidden; }
+    canvas { background: #000; display: block; }
+    .credit-text { color: #ffffff; font-size: 38px; font-family: "Jersey 10", sans-serif; }
+  </style>
+</head>
+<body>
+  <div id="unity-container">
+    <canvas id="unity-canvas" tabindex="-1"></canvas>
+    <div id="unity-loading-bar" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); text-align: center;">
+      <div class="credit-text">Ported by CoreScripts</div>
+      <div style="margin-top: 10px; font-size: 15px; color: #cccccc;">Be patient, first startup may be slower</div>
+      <div style="margin-top: 20px; display: flex; flex-direction: column; align-items: center;">
+        <div class="spinner"></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const canvas = document.querySelector("#unity-canvas");
+    const loadingBar = document.querySelector("#unity-loading-bar");
+    const buildUrl = "Build";
+    const config = {
+      dataUrl: `${buildUrl}/game.data`,
+      frameworkUrl: `${buildUrl}/game.framework.js`,
+      codeUrl: `${buildUrl}/game.wasm`,
+      streamingAssetsUrl: "StreamingAssets",
+      companyName: "madkidgames.com",
+      productName: "Hot Wheels: Race Off",
+      productVersion: "1.11.4",
+    };
+    const script = document.createElement("script");
+    script.src = `${buildUrl}/game.loader.js`;
+    script.onload = () => {
+      createUnityInstance(canvas, config, () => {}).then((instance) => {
+        window.unityInstance = instance;
+        if (loadingBar) loadingBar.style.display = "none";
+      }).catch(() => {});
+    };
+    document.body.appendChild(script);
+
+    function resize() {
+      const aspect = 16 / 9;
+      let w = window.innerWidth, h = window.innerWidth / aspect;
+      if (h > window.innerHeight) { h = window.innerHeight; w = h * aspect; }
+      if (canvas) { canvas.style.width = `${w}px`; canvas.style.height = `${h}px`; }
+    }
+    window.addEventListener('load', resize);
+    window.addEventListener('resize', resize);
+    resize(); // Forces the window to scale up instantly on load
+  </script>
+</body>
+</html>
